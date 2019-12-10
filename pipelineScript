@@ -8,4 +8,7 @@ node {
     stage('Print'){
         sh label: '', script: 'cat NewFile'
     }
+    stage('Completed'){
+       sh label: '', script: 'echo "pipeline Job is completed" | mailx -s "pipeline Job is completed" shimon.pozin@oracle.com'
+    }
 }
