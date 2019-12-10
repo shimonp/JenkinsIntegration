@@ -9,6 +9,6 @@ node {
         sh label: '', script: 'cat NewFile'
     }
     stage('Completed'){
-       sh label: '', script: 'echo "pipeline Job is completed" | mailx -s "pipeline Job is completed" shimon.pozin@oracle.com'
+       mail bcc: '', body: 'pipeline Job has just finished', cc: '', from: '', replyTo: '', subject: 'pipeline Job is completed', to: 'shimon.pozin@oracle.com'
     }
 }
